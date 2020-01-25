@@ -1,0 +1,1 @@
+import WeatherPane from './WeatherPane'; export default WeatherPane;

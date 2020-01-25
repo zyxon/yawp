@@ -1,0 +1,27 @@
+.App {
+  padding-top: 15px;
+}
+
+.spinner-wrp {
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+.BigSpinner {
+  width: 4rem !important;
+  height: 4rem !important;
+  border-width: 0.35em !important;
+  margin-bottom: 15px;
+}
+
+.btn {
+  box-shadow: none !important
+}
+.btn.focus {
+  outline: none !important;
+  outline-offset: none !important;
+  
+}
