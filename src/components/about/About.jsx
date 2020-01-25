@@ -55,7 +55,7 @@ export default class About extends React.Component {
                                     </tr>
                                     <tr>
                                         <td><b>Contact</b></td>
-                                        <td>jschneider kuk@c graphisoft pontcom</td>
+                                        <td>jschneider kukac graphisoft pontcom</td>
                                     </tr>
                                     <tr>
                                         <td><b>License</b></td>
