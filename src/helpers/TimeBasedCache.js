@@ -17,8 +17,8 @@ export default class TimeBasedCache {
             return null;
         }
 
-        if (Date.now() - value.time > this.timeout) {
-            this.cache[key] = undefined;
+        if (Date.now() - value._time_ > this.timeout) {
+            delete this.cache[key];
             return null;
         }
 
