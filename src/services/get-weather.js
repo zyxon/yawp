@@ -1,16 +1,24 @@
+import TimeBasedCache from '../helpers/TimeBasedCache';
+
 export default class GetWeatherService {
+    constructor() {
+        this.weatherDataCache = new TimeBasedCache(30000);
+    }
 
     async getWeather(cityName) {
         return new Promise(resolve => {
+            let weatherData = this.weatherDataCache.getData(cityName);
+            if (!weatherData) {
+                weatherData = this.generateWeather();
+                this.weatherDataCache.setData(cityName, weatherData);
+            }
             setTimeout(() => {
-                const weatherData = this.generateWeather();
-                
                 resolve({
                     ...weatherData,
                     cityName
                 });
             }, 1000);
-        })
+        });
     }
 
     generateWeather() {
